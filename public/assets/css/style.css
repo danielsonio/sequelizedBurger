@@ -1,0 +1,37 @@
+h3 {
+  text-align: center;
+  color: rgb(233, 37, 37);
+}
+
+#burger {
+  width: 25%;
+}
+
+body {
+    background-color: rgb(239, 242, 93);
+    height: 100%;
+}
+
+
+.uneaten {
+  background-color: rgb(116, 149, 224);
+  padding: 5px 5px 5px 5px;
+  margin: 5px;
+  text-transform: uppercase;
+  width: 70%;
+}
+
+.eaten {
+  background-color: rgb(170, 58, 160);
+  padding: 5px 5px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+button {
+  background-color: rgb(192,203,231);
+}
+
+#submit{
+  margin-top:15px;
+}
