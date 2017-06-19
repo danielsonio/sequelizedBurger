@@ -33,17 +33,17 @@ module.exports = function(app) {
 
 
   // POST route for saving a new post
-  // app.post("/", function(req, res) {
-  //   // Add sequelize code for creating a post using req.body,
-  //   // then return the result using res.json
-  //   db.Burger.create({
-  //     burger_name: req.body.burger_name,
-  //     devoured: req.body.devoured
-  //   }).then(function(dbBurger) {
-  //     // We have access to the new todo as an argument inside of the callback function
-  //     res.json(dbBurger);
-  //   });
-  // });
+  app.post("/", function(req, res) {
+    // Add sequelize code for creating a post using req.body,
+    // then return the result using res.json
+    db.Burger.create({
+      burger_name: req.body.burger_name,
+      devoured: req.body.devoured
+    }).then(function(dbBurger) {
+      // We have access to the new todo as an argument inside of the callback function
+      res.json(dbBurger);
+    });
+  });
 
 
 
@@ -60,16 +60,16 @@ module.exports = function(app) {
   // });
 
 
-  // app.put("/:id", function(req, res) {
-  //   db.Burger.update(req.body,
-  //     {
-  //       where: {
-  //         id: req.body.id
-  //       }
-  //     })
-  //   .then(function(dbBurger) {
-  //     res.json(dbBurger);
-  //   });
-  // });
+  app.put("/:id", function(req, res) {
+    db.Burger.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+    .then(function(dbBurger) {
+      res.json(dbBurger);
+    });
+  });
 
 };
