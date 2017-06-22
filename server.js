@@ -3,6 +3,8 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
 
+var PORT = process.env.PORT || 3000;
+
 var app = express();
 
 var db = require('./models')
@@ -30,7 +32,7 @@ app.use(express.static(__dirname + "/public"));
 require("./controllers/burgers_controller.js")(app);
 
 db.sequelize.sync().then(function() {
-  app.listen(process.env.PORT || 3000, function() {
+  app.listen(process.env.PORT, function() {
     console.log("listening on port %s", PORT);
   });
 });
